@@ -1,3 +1,11 @@
-.Home_Container-poster{
-    cursor: pointer;
+.Home_Container-poster {
+  cursor: pointer;
+}
+.Home_Container-poster:hover {
+  transform: scale(1.2);
+  transition: .9s;
+  margin: 10px;
+  border-radius: 20px;
+  border: 1px solid ;
+/* animation: cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
