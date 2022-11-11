@@ -70,7 +70,14 @@ const Navbar = () => {
       </Box>
 
       {/* Services tab */}
-      <Box className="services" w={"70%"} h={150} m="auto" mt={75} bg={"whiteAlpha.900"}>
+      <Box
+        className="services"
+        w={"70%"}
+        h={150}
+        m="auto"
+        mt={75}
+        bg={"whiteAlpha.900"}
+      >
         <HStack align={"center"} spacing={10} justify={"center"} pt={5}>
           <Box align={"center"}>
             <Image

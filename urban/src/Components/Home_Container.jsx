@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, HStack, Image, Heading } from "@chakra-ui/react";
 import Carousel from "./Carousel";
+import "./Home_Container.css";
+import Footer from "./Footer";
+
 
 const CustomerReview = [
   {
@@ -38,25 +41,27 @@ const CustomerReview = [
 ];
 
 const Home_Container = () => {
-  const [slide, setSlide] = useState(1);
   return (
     <div>
       <Box w={"100%"} mt={"100px"} mb={20} h="200px">
         <HStack spacing={"10px"} justify="center">
           <Box w={"25%"}>
             <Image
+              className="Home_Container-poster"
               src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/home-screen/1663592113155-5052d8.jpeg"
               alt="poster-1"
             />
           </Box>
           <Box w={"25%"}>
             <Image
+              className="Home_Container-poster"
               src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/home-screen/1663592119741-e5440b.jpeg"
               alt="poster-2"
             />
           </Box>
           <Box w={"25%"}>
             <Image
+              className="Home_Container-poster"
               src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/home-screen/1663592120206-204058.jpeg"
               alt="poster-3"
             />
@@ -68,10 +73,12 @@ const Home_Container = () => {
       <Box>
         <Heading>Customer Reviews</Heading>
 
-        <Box ml="90px" mt="30px">
+        <Box w={"90%"} m="auto" mt="30px" bg="blackAlpha.900">
           <Carousel data={CustomerReview} />
         </Box>
       </Box>
+       {/* footer */}
+       <Footer />
     </div>
   );
 };
