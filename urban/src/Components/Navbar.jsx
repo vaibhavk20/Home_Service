@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-
+// import logo from "./Home.gif";
 import logo from "./logo.png";
 
 import {
@@ -14,14 +14,10 @@ import {
   Heading,
   Select,
 } from "@chakra-ui/react";
-import {
-  ChevronDownIcon,
-  Search2Icon,
-  TriangleDownIcon,
-} from "@chakra-ui/icons";
+import { Search2Icon } from "@chakra-ui/icons";
 import { MdLocationOn } from "react-icons/md";
 
-// import { NavLink } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -41,7 +37,7 @@ const Navbar = () => {
         <HStack spacing={20} mr={20} color={"blackAlpha.900"}>
           <p>Blog</p>
           <p>Register As A Professional</p>
-          <p>Login/SignUp</p>
+          <Link to="/Login">Login/SignUp</Link>
         </HStack>
       </Flex>
       <Box w={"60%"} m="auto" mt={"200px"}>
@@ -49,9 +45,9 @@ const Navbar = () => {
           Home Services, On Demand.
         </Heading>
         <Flex gap="20px">
-          <HStack bg={"whitesmoke"} p={2} borderRadius={"base"}>
+          <HStack bg={"whitesmoke"} p={1.5} borderRadius={"base"}>
             <MdLocationOn />
-            <Select placeholder="Country" border={"none"}>
+            <Select placeholder="Country" width={"120px"} border={"none"}>
               <option>India</option>
               <option>China</option>
               <option>UK</option>
@@ -84,7 +80,7 @@ const Navbar = () => {
               src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1647671850137-e4a809.png"
               alt="regular-home-cleaning"
             />
-            <Text>Regular Home Cleaning</Text>
+            <Link to="/product">Regular Home Cleaning</Link>
           </Box>
           <Box align={"center"}>
             <Image src="https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1647671844702-24e611.png" />
