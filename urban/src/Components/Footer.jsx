@@ -8,11 +8,12 @@ import {
   BsLinkedin,
   BsPinterest,
 } from "react-icons/bs";
+import logo from "./logo.png";
 
 const Footer = () => {
   return (
     <div>
-      <Box w={"100%"} h={"500px"} bg={"black"} mt={20} color={"white"}>
+      <Box w={"100%"} bg={"black"} mt={20} color={"white"}>
         <Box
           w={"90%"}
           h={"400px"}
@@ -74,8 +75,20 @@ const Footer = () => {
       </Box>
 
       {/* footer lower part */}
-      <Box w={"100%"} h={"500px"} bg={"black"} color={"white"}>
-        <HStack>
+      <Box w={"100%"} mt={-10} bg={"black"} color={"white"}>
+        <HStack
+          w={"90%"}
+          borderTop="1px"
+          justify={"center"}
+          align={"center"}
+          margin={"auto"}
+          gap={20}
+        >
+          {/* icon Copy right */}
+          <HStack w={40} ml={10} mt={5}>
+            <Image src={logo} alt="logo" />
+          </HStack>
+
           {/* social icons */}
           <HStack>
             <BsFacebook size={"1.5em"} />
@@ -86,13 +99,24 @@ const Footer = () => {
             <BsPinterest size={"1.5em"} />
           </HStack>
 
+          {/* store */}
           <HStack>
-            <Image
-              src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f907eb0.png"
-              alt="playStore"
-            />
+            <HStack>
+              <Image
+                src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f907eb0.png"
+                alt="playStore"
+                w={"120px"}
+              />
+
+              <Image
+                src="https://images.urbanclap.com/image/upload/categories/category_v2/category_7f741d10.png"
+                alt="AppleStore"
+                w={"120px"}
+              />
+            </HStack>
           </HStack>
         </HStack>
+        <Text mt={-25}>© 2014-22 HomeService Technologies India Pvt. Ltd.</Text>
       </Box>
     </div>
   );
